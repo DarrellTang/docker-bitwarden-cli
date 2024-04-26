@@ -12,4 +12,7 @@ RUN apt update && \
 
 COPY entrypoint.sh /
 
+# Grant execution permissions to the entrypoint script
+RUN chmod +x /entrypoint.sh
+
 CMD ["/entrypoint.sh"]
