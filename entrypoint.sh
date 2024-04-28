@@ -4,7 +4,7 @@ set -e
 
 bw config server ${BW_HOST}
 
-bw login --apikey
+bw login --apikey || $TRUE
 
 eval $(bw unlock --passwordenv BW_PASSWORD | grep -o 'export.*')
 
